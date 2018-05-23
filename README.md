@@ -1,4 +1,6 @@
 # Nelson's Notes
+Run either build.sh or build.py to generate page
+
 Color Scheme
     Color 1: #343a40
     Color 2: #274074
