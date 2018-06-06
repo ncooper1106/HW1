@@ -24,8 +24,6 @@ def generate():
   
   
   for items in pages:
-    #print(items['filename'])
-    #print(items['title'])
     content = open(items['filename']).read()
     title = items['title']
     
