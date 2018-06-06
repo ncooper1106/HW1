@@ -1,45 +1,36 @@
-pages = [
-  {
-    'filename': 'content/index.html',
-    'title': 'index',
-  },
-  {
-    'filename': 'content/contact.html',
-    'title': 'contact',
-  },
-  {
-    'filename': 'content/education.html',
-    'title': 'education',
-  },
-  {
-    'filename': 'content/experience.html',
-    'title': 'experience',
-  },
-]
-  
-  
-def generate():
-  #read in the base template
-  template = open('templates/base.html').read()
-  
-  
-  for items in pages:
-    content = open(items['filename']).read()
-    title = items['title']
-    
-    #replace the placeholder tags with real infomation
-    finished_content = template.replace('{{ content }}', content).replace('{{ title }}', title)  
-    
-    #create new path names for html pages
-    page_name = str('docs/' + items['title'] + '.html')
-    
-    #write the new pages
-    open(page_name, 'w+').write(finished_content)
-    
-   
+import glob
+import os
+from jinja2 import Template
+# import markdown
+# pages = []
+#
+# def page_names(pages):
+#     all_files = glob.glob('content/*.md')
+#     for items in all_files:
+#         file_name = os.path.basename(items)
+#         name_only, extension = os.path.splitext(file_name)
+#         pages.append(name_only)
+#     return pages
+#
+# pages = page_names(pages)
+# print(pages)
+
+def create_files():
+    all_html_files = glob.glob('content/*.md')
+    template_html = open('templates/base.html').read()
+    template = Template(template_html)
+    for items in all_html_files:
+            file_name = os.path.basename(items)
+            name_only, extension = os.path.splitext(file_name)
+            updated_content = open(items).read()
+            page=template.render(
+                content = updated_content,
+                title = name_only
+            )
+            # name = items.replace('content', 'docs')
+            open('docs/' + name_only + '.html', "w+").write(page)
+
+
+
 if __name__ == '__main__':
-  generate()
-
-
-
-
+  create_files()
