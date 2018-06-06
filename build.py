@@ -12,7 +12,7 @@ pages = [
     'title': 'education',
   },
   {
-    'filename': ' content/experience.html',
+    'filename': 'content/experience.html',
     'title': 'experience',
   },
 ]
@@ -22,18 +22,15 @@ def generate():
   #read in the base template
   template = open('templates/base.html').read()
   
-  #define empty string for use in for loop
-  content = ''
-  title = ''
-  finished_content = ''
-  page_name = ''
   
-  for items in pages[]:
-    content = open(items['filename'].read())
-    title = open(items['title'].read())
+  for items in pages:
+    #print(items['filename'])
+    #print(items['title'])
+    content = open(items['filename']).read()
+    title = items['title']
     
     #replace the placeholder tags with real infomation
-    finishid_content = templates.replace('{{ content }}', content).replace('{{ title }}', title)  
+    finished_content = template.replace('{{ content }}', content).replace('{{ title }}', title)  
     
     #create new path names for html pages
     page_name = str('docs/' + items['title'] + '.html')
