@@ -2,18 +2,6 @@ import glob
 import os
 from jinja2 import Template
 # import markdown
-# pages = []
-#
-# def page_names(pages):
-#     all_files = glob.glob('content/*.md')
-#     for items in all_files:
-#         file_name = os.path.basename(items)
-#         name_only, extension = os.path.splitext(file_name)
-#         pages.append(name_only)
-#     return pages
-#
-# pages = page_names(pages)
-# print(pages)
 
 def create_files():
     all_html_files = glob.glob('content/*.md')
