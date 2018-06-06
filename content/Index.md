@@ -1,4 +1,4 @@
-    <div class="container-fluid p-0">
+<div class="container-fluid p-0">
       <section class="resume-section p-3 p-lg-5 d-flex d-column" id="bio">
         <div class="my-auto">
           <h1 class="mb-0">Nelson
