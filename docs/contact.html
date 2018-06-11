@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>{{ title }}</title>
+    <title>Contact</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -39,9 +39,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
-          {% for page in pages %}
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="{{ page.output_filename }}">Bio</a>
+            <a class="nav-link js-scroll-trigger" href="index.html">Bio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="experience.html">Experience</a>
@@ -57,7 +56,36 @@
     </nav>
 
    <!-- Content placeholder to be replaced -->
-   {{ content }}
+   <div class="container-fluid p-0">
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="contact">
+      <div class="my-auto">
+        <h2 class="mb-5">Contact Me</h2>
+        <p>Drop me a line, I'd love to work with you on your next project!</p>
+        <div class="email">
+        <a href="mailto:ncooper1106@gmail.com">              
+              <i class="fa fa-envelope-o"> Email me</i>
+               </a>
+              </div>
+           </div>
+        </div>
+
+<pre><code>  &lt;/div&gt;
+</code></pre>
+<p></section>
+</div></p>
+<!-- Bootstrap core JavaScript -->
+
+<script src="vendor/jquery/jquery.min.js"></script>
+
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for this template -->
+
+<script src="js/resume.min.js"></script>
 
    <!-- Bottom -->
   </body>

@@ -1,3 +1,6 @@
+title: Index
+
+
 <div class="container-fluid p-0">
       <section class="resume-section p-3 p-lg-5 d-flex d-column" id="bio">
         <div class="my-auto">
@@ -44,16 +47,14 @@
           </ul>
         </div>
       </section>
-
     </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for this template -->
-    <script src="js/resume.min.js"></script>
-
+<!-- Custom scripts for this template -->
+<script src="js/resume.min.js"></script>
